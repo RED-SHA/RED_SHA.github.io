@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+header nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #444;
+}
+
+header nav ul li:hover ul {
+    display: block;
+}
+
+.banner {
+    height: 300px;
+    background: url('/img/banner.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exhibitions, .collection {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
