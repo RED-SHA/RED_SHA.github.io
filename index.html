@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="/css/reset.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<title>미맥 - 한국도자기</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mimaek.com">
+<meta property="og:image" content="/img/mimaek_logo.png">
+<meta property="og:title" content="미맥 - 한국도자기">
+<meta property="og:description" content="한국 전통 도자기의 아름다움을 선사하는 미맥입니다.">
+<!-- Favicon -->
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+</script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <h1><a href="/"><img src="/img/mimaek_logo.png" alt="미맥 로고"></a></h1>
+        <nav>
+            <ul>
+                <li><a href="/about">회사 소개</a></li>
+                <li><a href="/collection">제품 컬렉션</a></li>
+                <li><a href="/exhibition">전시 일정</a></li>
+                <li><a href="/contact">고객 센터</a></li>
+            </ul>
+        </nav>
+        <div class="header-lang">
+            <button onclick="changeLanguage()">ENG</button>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="main-banner">
+        <div class="banner-content">
+            <h2>전통과 현대의 아름다움을 담은 도자기</h2>
+            <p>한국 도자기의 미를 세계에 전합니다.</p>
+            <button onclick="window.location.href='/collection'">컬렉션 보기</button>
+        </div>
+    </section>
+    <section class="collection">
+        <h2>주요 컬렉션</h2>
+        <div class="product-grid">
+            <!-- 예시 제품 리스트 -->
+            <div class="product">
+                <img src="/img/product1.jpg" alt="도자기 예시">
+                <h3>백자 다완</h3>
+                <p>전통적인 백자 다완, 조선의 아름다움을 담았습니다.</p>
+                <button onclick="window.location.href='/collection/product1'">상세 보기</button>
+            </div>
+            <div class="product">
+                <img src="/img/product2.jpg" alt="도자기 예시">
+                <h3>청자 꽃병</h3>
+                <p>섬세한 꽃 모양의 청자, 세련된 디자인을 선사합니다.</p>
+                <button onclick="window.location.href='/collection/product2'">상세 보기</button>
+            </div>
+            <!-- 추가 제품 카드 -->
+        </div>
+    </section>
+    <section class="exhibitions">
+        <h2>전시 일정</h2>
+        <div class="exhibition-list">
+            <div class="exhibition">
+                <h3>한국 도자기 특별전</h3>
+                <p>기간: 2024.10.05 ~ 2024.12.25</p>
+                <button onclick="window.location.href='/exhibition/special'">상세 보기</button>
+            </div>
+            <!-- 추가 전시 정보 -->
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-info">
+        <p>미맥 한국도자기</p>
+        <address>서울특별시 종로구 도자기로 123</address>
+        <p>고객 센터: 02-1234-5678</p>
+    </div>
+    <ul class="sns-links">
+        <li><a href="https://www.instagram.com/mimaek_official" target="_blank">인스타그램</a></li>
+        <li><a href="https://www.facebook.com/mimaek" target="_blank">페이스북</a></li>
+    </ul>
+    <p>&copy; 2024 Mimaek Co., Ltd. All Rights Reserved.</p>
+</footer>
+<script src="/js/script.js"></script>
+</body>
+</html>
