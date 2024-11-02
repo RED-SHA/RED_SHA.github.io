@@ -49,9 +49,9 @@ header {
 }
 
 .logo img {
-  width: 40px; /* 로고 이미지 크기 조정 */
+  width: 40px;
   height: auto;
-  margin-right: 10px; /* 로고와 텍스트 사이 간격 */
+  margin-right: 10px;
 }
 
 .main-nav ul {
@@ -84,9 +84,9 @@ header {
 /* 메인 배너 스타일 */
 .main-banner {
   position: relative;
-  margin-top: 80px; /* 헤더 높이만큼 여백 추가 */
+  margin-top: 80px;
   width: 100%;
-  height: calc(100vh - 80px); /* 헤더 높이만큼 뺀 높이 */
+  height: calc(100vh - 80px);
   overflow: hidden;
   z-index: 1;
 }
@@ -227,12 +227,12 @@ header {
 /* 게시물 리스트 */
 .post-list {
   display: flex;
-  gap: 20px;
+  gap: 10px; /* 수정됨 */
   flex-wrap: wrap;
 }
 
 .post-item {
-  flex: 1 1 calc(33.333% - 20px);
+  flex: 1 1 calc(33.333% - 20px); /* gap이 10px이므로 20px을 빼줌 */
   margin-bottom: 30px;
 }
 
@@ -256,7 +256,9 @@ header {
 .collection-swiper {
   position: relative;
   width: 100%;
+  max-width: 100%; /* 추가 */
   height: 400px;
+  overflow: hidden; /* 추가 */
 }
 
 .collection-swiper .swiper-slide {
@@ -306,68 +308,57 @@ header {
 
 /* 푸터 스타일 */
 footer {
-  background-color: #f9f9f9;
+  background-color: #333;
+  color: #fff;
   padding: 40px 20px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-info {
-  flex: 1;
+  text-align: center;
 }
 
 .footer-info p {
-  margin-bottom: 10px;
-}
-
-.footer-nav {
-  flex: 1;
+  margin-bottom: 5px;
 }
 
 .footer-nav ul {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.footer-nav ul li a {
-  font-size: 16px;
-  color: #666;
+.footer-nav a {
+  color: #fff;
+  font-size: 14px;
 }
 
-.footer-social {
-  flex: 1;
-  display: flex;
-  gap: 10px;
+.footer-social a {
+  margin: 0 10px;
 }
 
-.footer-social a img {
-  width: 30px;
-  height: 30px;
+.footer-social img {
+  width: 24px;
+  height: 24px;
 }
 
 .copyright {
-  text-align: center;
-  margin-top: 20px;
-  color: #999;
+  font-size: 14px;
+  color: #ccc;
 }
 
 /* 반응형 스타일 */
-@media (max-width: 1024px) {
-  .post-item {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
+  .header-container,
+  .footer-container {
+    max-width: 100%;
+  }
+
+  .banner-info {
+    left: 20px;
+    right: 20px;
   }
 
   .main-nav ul {

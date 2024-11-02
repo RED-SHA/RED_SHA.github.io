@@ -1,0 +1,396 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav ul li a {
+  font-size: 16px;
+  padding: 5px 0;
+  color: #333;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px solid #333;
+}
+
+/* 히어로 섹션 스타일 */
+.hero-section {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  margin-top: 70px; /* 헤더의 높이를 고려하여 마진 추가 */
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+}
+
+/* 회사 소개 섹션 스타일 */
+.company-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.company-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.company-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.company-message {
+  flex: 1;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.company-image {
+  flex: 1;
+}
+
+.company-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 대표 소개 섹션 스타일 */
+.ceo-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.ceo-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ceo-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.ceo-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ceo-photo {
+  text-align: center;
+}
+
+.ceo-photo img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ceo-photo h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.ceo-message {
+  flex: 1;
+}
+
+.ceo-message p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* 연혁 섹션 스타일 */
+.history-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.history-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.history-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #e5e5e5;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.timeline-item .timeline-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 4px solid #e5e5e5;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item .timeline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-item .timeline-content {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+}
+
+.timeline-item .timeline-content.left {
+  float: left;
+  margin-right: 10%;
+  text-align: right;
+}
+
+.timeline-item .timeline-content.right {
+  float: right;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.timeline-item .timeline-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.timeline-item .timeline-content p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.timeline-item .timeline-content a {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+.timeline-item .timeline-content a:hover {
+  text-decoration: none;
+}
+
+.timeline-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-info p {
+  margin-bottom: 5px;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .ceo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-image, .company-message {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item .timeline-icon {
+    left: 20px;
+    transform: translate(0, 0);
+  }
+
+  .timeline-item .timeline-content {
+    width: calc(100% - 80px);
+    float: none;
+    margin: 0;
+    text-align: left;
+    padding-left: 100px;
+  }
+
+  .timeline-item .timeline-content.left,
+  .timeline-item .timeline-content.right {
+    padding-left: 100px;
+  }
+}
